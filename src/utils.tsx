@@ -1,4 +1,5 @@
-import { FaFacebook, FaGithub, FaInstagram, FaLinkedin, FaThreads, FaTwitter, FaXTwitter, FaYoutube } from "react-icons/fa6";
+import { FaFacebook, FaGithub, FaInstagram, FaLinkedin, FaThreads, FaTwitter, FaXTwitter, FaYoutube } from 'react-icons/fa6';
+import { FaTelegramPlane } from 'react-icons/fa';
 
 export const getPlatformIconByName = (platformName: string): JSX.Element | null => {
     switch (platformName) {
@@ -14,12 +15,15 @@ export const getPlatformIconByName = (platformName: string): JSX.Element | null 
         case 'linkedin': {
             return <FaLinkedin size={24} className='min-w-fit' />;
         }
+        case 'telegram': {
+            return <FaTelegramPlane size={24} className='min-w-fit' />;
+        }
         case 'threads': {
             return <FaThreads size={24} className='min-w-fit' />;
         }
         case 'twitter': {
             return <FaTwitter size={24} className='min-w-fit' />;
-        } 
+        }
         case 'youtube': {
             return <FaYoutube size={24} className='min-w-fit' />;
         }
@@ -30,4 +34,4 @@ export const getPlatformIconByName = (platformName: string): JSX.Element | null 
             console.log('Platform name not supported, no icon is returned:', platformName);
             return null;
     }
-}
+};

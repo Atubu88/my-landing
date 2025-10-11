@@ -1,13 +1,13 @@
-import React from 'react'
+import React from 'react';
 
 interface Props {
     className?: string;
 }
 
-const Container: React.FC<React.PropsWithChildren<Props>> =({ children, className }: React.PropsWithChildren<Props>) => {
+const Container: React.FC<React.PropsWithChildren<Props>> = ({ children, className }: React.PropsWithChildren<Props>) => {
     return (
-        <div className={`px-5 w-full max-w-7xl mx-auto ${className ? className : ""}`}>{children}</div>
-    )
-}
+        <div className={`w-full max-w-7xl px-5 mx-auto ${className ? className : ''}`}>{children}</div>
+    );
+};
 
-export default Container
+export default Container;

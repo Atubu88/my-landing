@@ -1,12 +1,11 @@
 import React from 'react';
 import Image from 'next/image';
 
-import AppStoreButton from './AppStoreButton';
-import PlayStoreButton from './PlayStoreButton';
-
 import { heroDetails } from '@/data/hero';
 
 const Hero: React.FC = () => {
+    const { heading, subheading, primaryCta, secondaryCta, centerImageSrc } = heroDetails;
+
     return (
         <section
             id="hero"
@@ -21,22 +20,36 @@ const Hero: React.FC = () => {
             </div>
 
             <div className="text-center">
-                <h1 className="text-4xl md:text-6xl md:leading-tight font-bold text-foreground max-w-lg md:max-w-2xl mx-auto">{heroDetails.heading}</h1>
-                <p className="mt-4 text-foreground max-w-lg mx-auto">{heroDetails.subheading}</p>
-                <div className="mt-6 flex flex-col sm:flex-row items-center sm:gap-4 w-fit mx-auto">
-                    <AppStoreButton dark />
-                    <PlayStoreButton dark />
+                <h1 className="text-4xl md:text-6xl md:leading-tight font-bold text-foreground max-w-lg md:max-w-2xl mx-auto">{heading}</h1>
+                <p className="mt-4 text-foreground max-w-2xl mx-auto text-lg md:text-xl">{subheading}</p>
+                <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a
+                        href={primaryCta.href}
+                        className="w-full sm:w-auto rounded-full bg-primary px-8 py-3 text-base font-semibold text-black transition-colors hover:bg-primary-accent"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        {primaryCta.label}
+                    </a>
+                    <a
+                        href={secondaryCta.href}
+                        className="w-full sm:w-auto rounded-full border border-foreground/20 px-8 py-3 text-base font-semibold text-foreground transition-colors hover:border-primary hover:text-primary"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        {secondaryCta.label}
+                    </a>
                 </div>
                 <Image
-                    src={heroDetails.centerImageSrc}
+                    src={centerImageSrc}
                     width={480}
                     height={340}
                     quality={100}
                     sizes="(max-width: 768px) 100vw, 480px"
-                    priority={true}
-                    unoptimized={true}
-                    alt="Демонстрация интерфейса чат-бота"
-                    className='relative mt-12 md:mt-16 mx-auto z-10'
+                    priority
+                    unoptimized
+                    alt="Демонстрация интерфейса Telegram-бота"
+                    className="relative mt-12 md:mt-16 mx-auto z-10"
                 />
             </div>
         </section>

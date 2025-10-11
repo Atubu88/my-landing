@@ -1,4 +1,4 @@
-import { IMenuItem, ISocials } from "@/types";
+import { IMenuItem, ISocials } from '@/types';
 
 export const footerDetails: {
     subheading: string;
@@ -7,31 +7,30 @@ export const footerDetails: {
     telephone: string;
     socials: ISocials;
 } = {
-    subheading: "Empowering businesses with cutting-edge financial technology solutions.",
+    subheading: 'Телеграм-боты, которые продают, консультируют и автоматизируют процессы прямо в Telegram.',
     quickLinks: [
         {
-            text: "Features",
-            url: "#features"
+            text: 'Наши боты',
+            url: '#portfolio',
         },
         {
-            text: "Pricing",
-            url: "#pricing"
+            text: 'Услуги',
+            url: '#services',
         },
         {
-            text: "Testimonials",
-            url: "#testimonials"
-        }
+            text: 'Цены',
+            url: '#pricing',
+        },
+        {
+            text: 'FAQ',
+            url: '#faq',
+        },
     ],
-    email: 'address@yoursite.com',
-    telephone: '+1 (123) 456-7890',
+    email: 'hello@codexbot.dev',
+    telephone: '',
     socials: {
-        // github: 'https://github.com',
-        // x: 'https://twitter.com/x',
-        twitter: 'https://twitter.com/Twitter',
-        facebook: 'https://facebook.com',
-        // youtube: 'https://youtube.com',
-        linkedin: 'https://www.linkedin.com',
-        // threads: 'https://www.threads.net',
-        instagram: 'https://www.instagram.com',
-    }
-}
+        telegram: 'https://t.me/codexdev',
+        github: 'https://github.com/codex-bots',
+        linkedin: 'https://www.linkedin.com/in/codexdev',
+    },
+};

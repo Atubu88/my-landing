@@ -11,7 +11,7 @@ export const testimonials: ITestimonial[] = [
     {
         name: 'Мария Лебедева',
         role: 'Digital Lead, BankPoint',
-        message: `Мы запустили консультационного бота на сайте и в Telegram. Благодаря ${siteDetails.siteName} заявки на ипотеку выросли на 32%, а CRM получает всё общение в карточке клиента.`,
+        message: `Мы запустили консультационного бота на сайте и в Telegram. Благодаря ${siteDetails.siteName} заявки на ипотеку выросли на 32%, а вся переписка остаётся в одном боте.`,
         avatar: '/images/testimonial-2.webp',
     },
     {
