@@ -1,70 +1,70 @@
-import { FiBarChart2, FiBriefcase, FiDollarSign, FiLock, FiPieChart, FiShield, FiTarget, FiTrendingUp, FiUser } from "react-icons/fi";
+import { FiCpu, FiDatabase, FiGitMerge, FiGlobe, FiHeadphones, FiLayers, FiMessageCircle, FiUsers, FiZap } from "react-icons/fi";
 
 import { IBenefit } from "@/types"
 
 export const benefits: IBenefit[] = [
     {
-        title: "Smart Budgeting",
-        description: "Take the guesswork out of managing your money. Our AI-powered budgeting tool adapts to your lifestyle and helps you stay on track.",
+        title: "Проектирование сценариев",
+        description: "Исследуем потребности, выстраиваем голос и тональность чат-бота и создаём сценарии, которые ведут пользователя к нужному действию.",
         bullets: [
             {
-                title: "Intelligent Categorization",
-                description: "Automatically sorts your transactions for crystal-clear insights.",
-                icon: <FiBarChart2 size={26} />
+                title: "Диалоговые карты",
+                description: "Визуализируем ветки общения и точки эскалации для команды и стейкхолдеров.",
+                icon: <FiMessageCircle size={26} />
             },
             {
-                title: "Customizable Goals",
-                description: "Set and track financial objectives that matter to you.",
-                icon: <FiTarget size={26} />
+                title: "Омниканальные потоки",
+                description: "Проектируем сценарии для сайта, мессенджеров и голосовых ассистентов одновременно.",
+                icon: <FiLayers size={26} />
             },
             {
-                title: "Predictive Analysis",
-                description: "Get ahead of your finances with spending forecasts and alerts.",
-                icon: <FiTrendingUp size={26} />
+                title: "Материалы для операторов",
+                description: "Готовим подсказки и шаблоны ответов для команды поддержки.",
+                icon: <FiUsers size={26} />
             }
         ],
         imageSrc: "/images/mockup-1.webp"
     },
     {
-        title: "Seamless Investing",
-        description: "Start building wealth today, no financial degree required. Finwise makes investing accessible and straightforward.",
+        title: "Интеграция и автоматизация",
+        description: "Связываем чат-ботов с вашей CRM, базами знаний и сервисами, чтобы они выполняли рутинные процессы без участия оператора.",
         bullets: [
             {
-                title: "Micro-Investing",
-                description: "Begin with as little as $1 and watch your money grow.",
-                icon: <FiDollarSign size={26} />
+                title: "Подключение к CRM",
+                description: "Настраиваем двусторонний обмен данными с Bitrix24, amoCRM и другими системами.",
+                icon: <FiGitMerge size={26} />
             },
             {
-                title: "Expert Portfolios",
-                description: "Choose from investment strategies tailored to your risk tolerance.",
-                icon: <FiBriefcase size={26} />
+                title: "Работа с данными",
+                description: "Передаём заявки, статусы и файлы в режиме реального времени.",
+                icon: <FiDatabase size={26} />
             },
             {
-                title: "Real-Time Performance",
-                description: "Track your investments with easy-to-understand metrics and visuals.",
-                icon: <FiPieChart size={26} />
+                title: "Автопроцессы",
+                description: "Запускаем цепочки писем, вебхуки и уведомления для команды и клиентов.",
+                icon: <FiZap size={26} />
             }
         ],
         imageSrc: "/images/mockup-2.webp"
     },
     {
-        title: "Bank-Grade Security",
-        description: "Your financial data deserves the best protection. Rest easy knowing Finwise employs cutting-edge security measures.",
+        title: "Обучение и поддержка ИИ-агентов",
+        description: "Проводим обучение модели на ваших данных, обновляем знания и сопровождаем бота после запуска.",
         bullets: [
             {
-                title: "Military-Grade Encryption",
-                description: "Your information is safeguarded with the highest level of encryption.",
-                icon: <FiLock size={26} />
+                title: "Настройка AI-модели",
+                description: "Подбираем промпты, temperature и память под бизнес-задачи.",
+                icon: <FiCpu size={26} />
             },
             {
-                title: "Biometric Authentication",
-                description: "Access your account securely with fingerprint or facial recognition.",
-                icon: <FiUser size={26} />
+                title: "Мультиязычность",
+                description: "Обучаем ботов работать с несколькими языками и сценариями.",
+                icon: <FiGlobe size={26} />
             },
             {
-                title: "Real-Time Fraud Detection",
-                description: "Our system constantly monitors for suspicious activity to keep your money safe.",
-                icon: <FiShield size={26} />
+                title: "Саппорт 24/7",
+                description: "Команда мониторинга обновляет знания и реагирует на аномалии.",
+                icon: <FiHeadphones size={26} />
             }
         ],
         imageSrc: "/images/mockup-1.webp"

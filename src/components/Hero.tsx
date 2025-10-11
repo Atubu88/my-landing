@@ -29,13 +29,13 @@ const Hero: React.FC = () => {
                 </div>
                 <Image
                     src={heroDetails.centerImageSrc}
-                    width={384}
+                    width={480}
                     height={340}
                     quality={100}
-                    sizes="(max-width: 768px) 100vw, 384px"
+                    sizes="(max-width: 768px) 100vw, 480px"
                     priority={true}
                     unoptimized={true}
-                    alt="app mockup"
+                    alt="Демонстрация интерфейса чат-бота"
                     className='relative mt-12 md:mt-16 mx-auto z-10'
                 />
             </div>

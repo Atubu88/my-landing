@@ -3,23 +3,23 @@ import { siteDetails } from "./siteDetails";
 
 export const faqs: IFAQ[] = [
     {
-        question: `Is ${siteDetails.siteName} secure?`,
-        answer: 'Absolutely. We use bank-level encryption to protect your data and never store your login information. Plus, our biometric authentication adds an extra layer of security.',
+        question: 'Сколько стоит запуск чат-бота?',
+        answer: `Стоимость зависит от каналов, объёма интеграций и сложности сценариев. Базовые проекты с одним каналом начинаются от 45 000 ₽, а для комплексных решений мы готовим индивидуальную смету после интервью.`,
     },
     {
-        question: `Can I use ${siteDetails.siteName} on multiple devices?`,
-        answer: 'Absolutely! Your Finwise account syncs seamlessly across all your devices - smartphone, tablet, and computer.',
+        question: 'Сколько времени занимает внедрение?',
+        answer: 'Средний срок — 2-4 недели. В него входит исследование, прототипирование сценариев, интеграция с CRM и тестирование. Голосовые проекты и омниканальные схемы могут потребовать до 6 недель.',
     },
     {
-        question: 'Can I connect all my bank accounts?',
-        answer: `Yes! ${siteDetails.siteName} supports connections with over 10,000 financial institutions worldwide. Simply log in through our secure portal to link your accounts.`
+        question: 'С какими системами вы интегрируетесь?',
+        answer: 'Поддерживаем популярные CRM (Bitrix24, amoCRM, Creatio), helpdesk-платформы, сервисы рассылок, внутренние базы данных и webhook-интерфейсы. При необходимости подключаемся к вашим API и шинам данных.',
     },
     {
-        question: 'Do I need any financial expertise to use the investing features?',
-        answer: 'Not at all! Our expert-curated portfolios and educational resources make investing accessible to everyone, regardless of experience level.',
+        question: 'Как происходит обучение ИИ-агента?',
+        answer: 'Мы собираем и структурируем корпоративные знания, создаём инструкции для модели и настраиваем параметры генерации. После запуска команда аналитиков регулярно обновляет датасеты и проверяет ответы.',
     },
     {
-        question: 'What if I need help using the app?',
-        answer: 'Our dedicated support team is available 24/7 via chat or email. Plus, we offer extensive in-app tutorials and a comprehensive knowledge base to help you make the most of Finwise.'
+        question: 'Кто помогает после релиза?',
+        answer: `У ${siteDetails.siteName} есть выделенная команда саппорта. Мы мониторим SLA, предупреждаем о пиках нагрузки, выпускаем ежемесячные отчёты и предлагаем улучшения сценариев.`,
     }
 ];
