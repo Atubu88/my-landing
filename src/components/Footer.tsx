@@ -8,12 +8,12 @@ import { getPlatformIconByName } from '@/utils';
 
 const Footer: React.FC = () => {
     return (
-        <footer className="bg-hero-background text-foreground py-10">
-            <div className="max-w-7xl w-full mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10">
+        <footer className="bg-hero-background py-10 text-foreground">
+            <div className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-10 px-6 md:grid-cols-3">
                 <div>
                     <Link href="/" className="flex items-center gap-2">
-                        <FaFingerprint className="min-w-fit w-5 h-5 md:w-7 md:h-7" />
-                        <h3 className="manrope text-xl font-semibold cursor-pointer">
+                        <FaFingerprint className="h-5 w-5 min-w-fit md:h-7 md:w-7" />
+                        <h3 className="manrope cursor-pointer text-xl font-semibold">
                             {siteDetails.siteName}
                         </h3>
                     </Link>
@@ -22,45 +22,61 @@ const Footer: React.FC = () => {
                     </p>
                 </div>
                 <div>
-                    <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
+                    <h4 className="mb-4 text-lg font-semibold">Навигация</h4>
                     <ul className="text-foreground-accent">
                         {footerDetails.quickLinks.map(link => (
                             <li key={link.text} className="mb-2">
-                                <Link href={link.url} className="hover:text-foreground">{link.text}</Link>
+                                <Link href={link.url} className="hover:text-foreground">
+                                    {link.text}
+                                </Link>
                             </li>
                         ))}
                     </ul>
                 </div>
                 <div>
-                    <h4 className="text-lg font-semibold mb-4">Contact Us</h4>
+                    <h4 className="mb-4 text-lg font-semibold">Контакты</h4>
 
-                    {footerDetails.email && <a href={`mailto:${footerDetails.email}`}  className="block text-foreground-accent hover:text-foreground">Email: {footerDetails.email}</a>}
+                    {footerDetails.email && (
+                        <a href={`mailto:${footerDetails.email}`} className="block text-foreground-accent hover:text-foreground">
+                            Email: {footerDetails.email}
+                        </a>
+                    )}
 
-                    {footerDetails.telephone && <a href={`tel:${footerDetails.telephone}`} className="block text-foreground-accent hover:text-foreground">Phone: {footerDetails.telephone}</a>}
+                    {footerDetails.telephone && (
+                        <a href={`tel:${footerDetails.telephone}`} className="block text-foreground-accent hover:text-foreground">
+                            Телефон: {footerDetails.telephone}
+                        </a>
+                    )}
 
                     {footerDetails.socials && (
-                        <div className="mt-5 flex items-center gap-5 flex-wrap">
+                        <div className="mt-5 flex flex-wrap items-center gap-5">
                             {Object.keys(footerDetails.socials).map(platformName => {
-                                if (platformName && footerDetails.socials[platformName]) {
+                                const url = footerDetails.socials[platformName];
+                                if (platformName && url) {
                                     return (
                                         <Link
-                                            href={footerDetails.socials[platformName]}
+                                            href={url}
                                             key={platformName}
                                             aria-label={platformName}
+                                            className="text-foreground transition-colors hover:text-primary"
+                                            target="_blank"
+                                            rel="noreferrer"
                                         >
                                             {getPlatformIconByName(platformName)}
                                         </Link>
-                                    )
+                                    );
                                 }
+                                return null;
                             })}
                         </div>
                     )}
                 </div>
             </div>
-            <div className="mt-8 md:text-center text-foreground-accent px-6">
-                <p>Copyright &copy; {new Date().getFullYear()} {siteDetails.siteName}. All rights reserved.</p>
-                <p className="text-sm mt-2 text-gray-500">Made with &hearts; by <a href="https://nexilaunch.com" target="_blank">Nexi Launch</a></p>
-                <p className="text-sm mt-2 text-gray-500">UI kit by <a href="https://ui8.net/youthmind/products/fintech-finance-mobile-app-ui-kit" target="_blank">Youthmind</a></p>
+            <div className="mt-8 px-6 text-foreground-accent md:text-center">
+                <p>© {new Date().getFullYear()} {siteDetails.siteName}. Telegram-разработчик Codex.</p>
+                <p className="mt-2 text-sm text-gray-500">
+                    Сайт собран на Next.js и Tailwind CSS.
+                </p>
             </div>
         </footer>
     );

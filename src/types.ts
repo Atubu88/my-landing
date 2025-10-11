@@ -3,17 +3,17 @@ export interface IMenuItem {
     url: string;
 }
 
-export interface IBenefit {
-    title: string;
-    description: string;
-    imageSrc: string;
-    bullets: IBenefitBullet[]
-}
-
-export interface IBenefitBullet {
+export interface IService {
     title: string;
     description: string;
     icon: JSX.Element;
+}
+
+export interface IPortfolioItem {
+    title: string;
+    description: string;
+    imageSrc: string;
+    demoUrl: string;
 }
 
 export interface IPricing {
@@ -45,6 +45,7 @@ export interface ISocials {
     github?: string;
     instagram?: string;
     linkedin?: string;
+    telegram?: string;
     threads?: string;
     twitter?: string;
     youtube?: string;

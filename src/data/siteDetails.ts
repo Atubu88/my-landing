@@ -1,12 +1,15 @@
 export const siteDetails = {
-    siteName: 'Finwise',
-    siteUrl: 'https://finwise-omega.vercel.app/',
+    siteName: 'codexbot.dev',
+    siteUrl: 'https://codexbot.dev',
     metadata: {
-        title: 'Finwise - Next.js and Tailwind CSS Landing Page Template',
-        description: 'Finwise empowers businesses with cutting-edge technology solutions to drive success and efficiency.',
+        title: 'Telegram-боты под ключ от Codex',
+        description: 'Разрабатываем Telegram-ботов для бизнеса: бронирование, квизы, автоматизация и SaaS-проекты внутри Telegram.',
     },
-    language: 'en-us',
-    locale: 'en-US',
-    siteLogo: `${process.env.BASE_PATH || ''}/images/logo.png`, // or use a string for the logo e.g. "TechStartup"
-    googleAnalyticsId: '', // e.g. G-XXXXXXX,
-}
+    language: 'ru',
+    locale: 'ru-RU',
+    siteLogo: `${process.env.BASE_PATH || ''}/images/logo.png`,
+    googleAnalyticsId: '',
+    telegram: 'https://t.me/codexdev',
+    telegramLabel: '@codexdev',
+    contactEmail: 'hello@codexbot.dev',
+};

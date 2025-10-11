@@ -28,12 +28,12 @@
     <g transform="translate(60 120)">
       <rect x="0" y="0" width="540" height="132" rx="28" fill="#0ea5e9" opacity="0.92"/>
       <text class="label" x="36" y="44" fill="#e0f2fe">Client</text>
-      <text class="message" x="36" y="80" fill="#f8fafc">"Нужно подключить чат-бота к нашему B24, сколько времени это займет?"</text>
+      <text class="message" x="36" y="80" fill="#f8fafc">"Нужно запустить чат-бота в нашем Telegram-канале. Сколько времени это займёт?"</text>
     </g>
     <g transform="translate(320 276)">
       <rect x="80" y="0" width="520" height="152" rx="28" fill="#15803d" opacity="0.95"/>
       <text class="label" x="120" y="46" fill="#dcfce7">Bot</text>
-      <text class="message" x="120" y="86" fill="#f0fdf4">"Мы настроим интеграцию с CRM и тестирование за 7 рабочих дней. Подтвердить запуск?"</text>
+      <text class="message" x="120" y="86" fill="#f0fdf4">"Настроим сценарии и приём оплат в Telegram за 7 рабочих дней. Подтвердить запуск?"</text>
     </g>
     <g transform="translate(60 452)">
       <rect x="0" y="0" width="500" height="120" rx="28" fill="#0ea5e9" opacity="0.92"/>
