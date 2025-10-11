@@ -4,7 +4,7 @@ export const portfolio: IPortfolioItem[] = [
     {
         title: 'Бот для салона красоты',
         description: 'Запись на услуги, напоминания в Telegram и каталог мастеров с отзывами и портфолио.',
-        imageSrc: '/images/mockup-1.webp',
+        imageSrc: '/images/telegram_demo_short.mp4',
         demoUrl: 'https://t.me/beauty_flow_bot',
     },
     {

@@ -8,6 +8,8 @@ export interface PhoneFrameProps {
 }
 
 const PhoneFrame: React.FC<PhoneFrameProps> = ({ image, alt = 'Preview inside phone mockup', className }) => {
+    const isVideo = /\.(mp4|webm|ogg)$/i.test(image);
+
     return (
         <div
             className={clsx(
@@ -20,14 +22,26 @@ const PhoneFrame: React.FC<PhoneFrameProps> = ({ image, alt = 'Preview inside ph
                 <div className="relative h-full w-full rounded-[2.7rem] border border-white/10 bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950 p-2">
                     {/* Screen area */}
                     <div className="relative h-full w-full overflow-hidden rounded-[2.2rem] bg-black/90">
-                        <Image
-                            src={image}
-                            alt={alt}
-                            fill
-                            sizes="(max-width: 768px) 70vw, 280px"
-                            className="object-cover"
-                            priority={false}
-                        />
+                        {isVideo ? (
+                            <video
+                                src={image}
+                                className="h-full w-full object-cover"
+                                autoPlay
+                                loop
+                                muted
+                                playsInline
+                                aria-label={alt}
+                            />
+                        ) : (
+                            <Image
+                                src={image}
+                                alt={alt}
+                                fill
+                                sizes="(max-width: 768px) 70vw, 280px"
+                                className="object-cover"
+                                priority={false}
+                            />
+                        )}
                         {/* Subtle screen reflection */}
                         <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-black/40 mix-blend-screen" />
                     </div>
