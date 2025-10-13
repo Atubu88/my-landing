@@ -48,7 +48,7 @@ const Header: React.FC = () => {
                         <li>
                             <Link
                                 href={siteDetails.telegram}
-                                className="rounded-full bg-primary px-8 py-3 text-black transition-colors hover:bg-primary-accent"
+                                className="telegram-button"
                                 target="_blank"
                                 rel="noreferrer"
                             >
@@ -94,7 +94,7 @@ const Header: React.FC = () => {
                     <li>
                         <Link
                             href={siteDetails.telegram}
-                            className="block w-fit rounded-full bg-primary px-5 py-2 text-black hover:bg-primary-accent"
+                            className="telegram-button w-fit"
                             target="_blank"
                             rel="noreferrer"
                             onClick={toggleMenu}

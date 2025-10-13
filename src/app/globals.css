@@ -70,3 +70,95 @@ h1, h2, h3, h4, h5, h6 {
 .benefit-section:last-of-type > div {
   @apply mb-10;
 }
+
+.telegram-button {
+  @apply relative inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full px-8 py-3 font-semibold text-black transition-transform;
+  background-image: linear-gradient(120deg, #ffe36b, #fed835, #fff3b0, #fed835);
+  background-size: 220% 220%;
+  box-shadow: 0 14px 28px -18px rgba(254, 216, 53, 0.85);
+  overflow: hidden;
+  animation: telegram-gradient 8s ease infinite, telegram-breath 5s ease-in-out infinite;
+}
+
+.telegram-button::before {
+  content: "";
+  position: absolute;
+  inset: -40% 0;
+  background: linear-gradient(120deg, transparent 20%, rgba(255, 255, 255, 0.65) 45%, transparent 70%);
+  opacity: 0;
+  transform: translateX(-120%) skewX(-12deg);
+  mix-blend-mode: screen;
+  animation: telegram-shimmer 4s linear infinite;
+  pointer-events: none;
+}
+
+.telegram-button::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(circle at 50% 30%, rgba(255, 255, 255, 0.4), transparent 55%);
+  opacity: 0.4;
+  pointer-events: none;
+  transition: opacity 0.6s ease;
+}
+
+.telegram-button:hover {
+  transform: translateY(-1px) scale(1.02);
+}
+
+.telegram-button:hover::after {
+  opacity: 0.6;
+}
+
+@keyframes telegram-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes telegram-shimmer {
+  0% {
+    transform: translateX(-150%) skewX(-12deg);
+    opacity: 0;
+  }
+  35% {
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateX(150%) skewX(-12deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(150%) skewX(-12deg);
+    opacity: 0;
+  }
+}
+
+@keyframes telegram-breath {
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 12px 24px -20px rgba(254, 216, 53, 0.75);
+  }
+  50% {
+    transform: scale(1.03);
+    box-shadow: 0 18px 32px -18px rgba(254, 216, 53, 0.95);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .telegram-button,
+  .telegram-button::before {
+    animation: none;
+  }
+  .telegram-button {
+    transform: none !important;
+  }
+}

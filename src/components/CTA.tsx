@@ -18,7 +18,7 @@ const CTA: React.FC = () => {
                             href={ctaDetails.telegramUrl}
                             target="_blank"
                             rel="noreferrer"
-                            className="mt-8 inline-flex items-center justify-center rounded-full bg-primary px-8 py-3 text-base font-semibold text-black transition-colors hover:bg-primary-accent"
+                            className="telegram-button mt-8 text-base"
                         >
                             💬 Написать в Telegram
                         </a>
