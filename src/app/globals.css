@@ -21,14 +21,25 @@ body {
   @apply text-lg;
 
   color: var(--foreground);
-  background-color: #eff5ff;
+  background-color: #eaf2ff;
   background-image:
-    radial-gradient(circle at 15% 20%, rgba(255, 220, 240, 0.6), transparent 58%),
-    radial-gradient(circle at 82% 18%, rgba(207, 235, 255, 0.55), transparent 55%),
-    radial-gradient(circle at 28% 88%, rgba(196, 255, 235, 0.5), transparent 60%),
-    linear-gradient(180deg, rgba(244, 249, 255, 1) 0%, rgba(235, 242, 255, 0.97) 38%, rgba(229, 238, 255, 0.95) 62%, rgba(242, 248, 255, 1) 100%);
+    radial-gradient(circle at 18% 16%, rgba(255, 230, 248, 0.7), transparent 60%),
+    radial-gradient(circle at 82% 20%, rgba(195, 226, 255, 0.55), transparent 58%),
+    radial-gradient(circle at 32% 88%, rgba(196, 255, 235, 0.45), transparent 62%),
+    linear-gradient(
+      180deg,
+      rgba(12, 45, 94, 0.95) 0%,
+      rgba(32, 78, 138, 0.9) 12%,
+      rgba(64, 117, 174, 0.78) 26%,
+      rgba(111, 158, 203, 0.62) 40%,
+      rgba(158, 193, 222, 0.44) 56%,
+      rgba(198, 220, 236, 0.28) 72%,
+      rgba(227, 237, 245, 0.16) 86%,
+      rgba(242, 247, 255, 0.08) 94%,
+      rgba(248, 251, 255, 0) 100%
+    );
   background-repeat: no-repeat;
-  background-size: 145% 145%, 135% 135%, 165% 165%, 100% 100%;
+  background-size: 150% 175%, 140% 165%, 180% 185%, 100% 220%;
   background-attachment: fixed;
   font-family: "Source Sans 3", sans-serif;
   font-optical-sizing: auto;
