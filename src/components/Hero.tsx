@@ -20,6 +20,11 @@ const Hero: React.FC = () => {
             </div>
 
             <div className="relative z-10 mx-auto w-full max-w-4xl text-center">
+                <div className="mb-6 flex items-center justify-center text-5xl sm:text-6xl" aria-hidden="true">
+                    <span className="robot-emoji" role="img" aria-label="Дружелюбный робот">
+                        🤖
+                    </span>
+                </div>
                 <h1 className="mx-auto max-w-3xl text-4xl font-bold text-foreground sm:text-5xl md:max-w-4xl md:text-6xl md:leading-tight">
                     {heading}
                 </h1>
