@@ -27,7 +27,7 @@ const Hero: React.FC = () => {
                 <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
                     <a
                         href={primaryCta.href}
-                        className="w-full sm:w-auto rounded-full bg-primary px-8 py-3 text-base font-semibold text-black transition-colors hover:bg-primary-accent"
+                        className="telegram-button w-full text-base sm:w-auto"
                         target="_blank"
                         rel="noreferrer"
                     >
