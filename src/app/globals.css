@@ -63,12 +63,41 @@ h1, h2, h3, h4, h5, h6 {
   font-style: normal;
 }
 
-.robot-emoji {
+.robot-logo {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  animation: robot-friendly 4.5s ease-in-out infinite;
-  text-shadow: 0 8px 18px rgba(48, 79, 255, 0.18);
+  width: clamp(72px, 12vw, 120px);
+  filter: drop-shadow(0 14px 28px rgba(48, 79, 255, 0.18));
+}
+
+.robot-logo__svg {
+  width: 100%;
+  height: auto;
+}
+
+.robot-logo__body {
+  transform-origin: 60px 110px;
+  animation: robot-bounce 5s ease-in-out infinite;
+}
+
+.robot-logo__antenna {
+  transform-origin: 60px 32px;
+  animation: robot-antenna 3.6s ease-in-out infinite;
+}
+
+.robot-logo__eye {
+  transform-origin: center;
+  animation: robot-blink 4.5s ease-in-out infinite;
+}
+
+.robot-logo__eye:nth-of-type(2) {
+  animation-delay: 0.15s;
+}
+
+.robot-logo__blink {
+  transform-origin: 48px 64px;
+  animation: robot-blink-overlay 4.5s ease-in-out infinite;
 }
 
 #logos svg {
@@ -161,22 +190,63 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-@keyframes robot-friendly {
+@keyframes robot-bounce {
   0%,
   100% {
-    transform: translateY(0) scaleY(1);
+    transform: translateY(0);
   }
   30% {
-    transform: translateY(-4px) scaleY(1);
+    transform: translateY(-6px);
   }
   45% {
-    transform: translateY(-6px) scaleY(0.92);
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-4px);
+  }
+}
+
+@keyframes robot-antenna {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  30% {
+    transform: rotate(6deg);
   }
   55% {
-    transform: translateY(-4px) scaleY(1.02);
+    transform: rotate(-5deg);
   }
-  70% {
-    transform: translateY(0) scaleY(1);
+  75% {
+    transform: rotate(3deg);
+  }
+}
+
+@keyframes robot-blink {
+  0%,
+  88%,
+  100% {
+    transform: scaleY(1);
+  }
+  92% {
+    transform: scaleY(0.15);
+  }
+  96% {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes robot-blink-overlay {
+  0%,
+  88%,
+  100% {
+    opacity: 0.08;
+  }
+  92% {
+    opacity: 0.4;
+  }
+  96% {
+    opacity: 0.08;
   }
 }
 
@@ -188,7 +258,10 @@ h1, h2, h3, h4, h5, h6 {
   .telegram-button {
     transform: none !important;
   }
-  .robot-emoji {
+  .robot-logo__body,
+  .robot-logo__antenna,
+  .robot-logo__eye,
+  .robot-logo__blink {
     animation: none;
     transform: none !important;
   }

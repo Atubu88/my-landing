@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 
 import { heroDetails } from '@/data/hero';
+import RobotLogo from './RobotLogo';
 
 const Hero: React.FC = () => {
     const { heading, subheading, primaryCta, secondaryCta, centerImageSrc } = heroDetails;
@@ -20,10 +21,8 @@ const Hero: React.FC = () => {
             </div>
 
             <div className="relative z-10 mx-auto w-full max-w-4xl text-center">
-                <div className="mb-6 flex items-center justify-center text-5xl sm:text-6xl" aria-hidden="true">
-                    <span className="robot-emoji" role="img" aria-label="Дружелюбный робот">
-                        🤖
-                    </span>
+                <div className="mb-6 flex items-center justify-center">
+                    <RobotLogo />
                 </div>
                 <h1 className="mx-auto max-w-3xl text-4xl font-bold text-foreground sm:text-5xl md:max-w-4xl md:text-6xl md:leading-tight">
                     {heading}
