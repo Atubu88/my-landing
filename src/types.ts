@@ -16,10 +16,21 @@ export interface IPortfolioItem {
     demoUrl: string;
 }
 
-export interface IPricing {
+export interface IPricingPlan {
     name: string;
-    price: number | string;
-    features: string[];
+    price: string;
+}
+
+export interface IPricingFeature {
+    name: string;
+    availability: Record<string, boolean>;
+}
+
+export interface IPricing {
+    title: string;
+    description: string;
+    plans: IPricingPlan[];
+    features: IPricingFeature[];
 }
 
 export interface IFAQ {

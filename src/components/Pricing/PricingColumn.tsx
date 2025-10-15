@@ -1,47 +1,84 @@
-import clsx from 'clsx';
-import { BsFillCheckCircleFill } from 'react-icons/bs';
+import { FiMinus, FiPlus } from 'react-icons/fi';
 
 import { IPricing } from '@/types';
-import { siteDetails } from '@/data/siteDetails';
 
 interface Props {
     tier: IPricing;
-    highlight?: boolean;
 }
 
-const PricingColumn: React.FC<Props> = ({ tier, highlight }: Props) => {
-    const { name, price, features } = tier;
+const PricingColumn: React.FC<Props> = ({ tier }) => {
+    const { title, description, plans, features } = tier;
 
     return (
-        <div className={clsx('w-full max-w-sm mx-auto rounded-xl border border-gray-200 bg-white lg:max-w-full', { 'shadow-lg ring-1 ring-primary/40': highlight })}>
-            <div className="rounded-t-xl border-b border-gray-200 p-6">
-                <h3 className="mb-4 text-2xl font-semibold">{name}</h3>
-                <p className="mb-6 text-3xl font-bold text-secondary md:text-5xl">
-                    {typeof price === 'number' ? `${price} ₽` : price}
-                </p>
-                <a
-                    href={siteDetails.telegram}
-                    target="_blank"
-                    rel="noreferrer"
-                    className={clsx('inline-flex w-full items-center justify-center rounded-full px-4 py-3 text-base font-semibold transition-colors', {
-                        'bg-primary text-black hover:bg-primary-accent': highlight,
-                        'bg-hero-background text-foreground hover:bg-gray-200': !highlight,
-                    })}
-                >
-                    Обсудить проект
-                </a>
+        <div className="flex h-full flex-col rounded-xl border border-gray-200 bg-white shadow-sm">
+            <div className="border-b border-gray-200 p-6">
+                <h3 className="text-2xl font-semibold text-foreground">{title}</h3>
+                <p className="mt-4 text-foreground-accent">{description}</p>
             </div>
-            <div className="p-6">
-                <p className="mb-0 text-sm font-bold uppercase tracking-wide text-foreground">Что входит</p>
-                <p className="mb-5 text-foreground-accent">Настрою пакет под вашу задачу и подсвечу шаги запуска.</p>
-                <ul className="mb-8 space-y-4">
-                    {features.map((feature, index) => (
-                        <li key={index} className="flex items-center">
-                            <BsFillCheckCircleFill className="mr-2 h-5 w-5 text-secondary" />
-                            <span className="text-foreground-accent">{feature}</span>
-                        </li>
-                    ))}
-                </ul>
+            <div className="flex-1 p-6">
+                <div className="overflow-hidden rounded-xl border border-gray-200">
+                    <table className="min-w-full divide-y divide-gray-200 text-sm">
+                        <thead className="bg-hero-background/60">
+                            <tr>
+                                <th
+                                    scope="col"
+                                    className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide text-foreground-accent"
+                                >
+                                    Возможности
+                                </th>
+                                {plans.map((plan) => (
+                                    <th
+                                        key={plan.name}
+                                        scope="col"
+                                        className="px-4 py-3 text-center text-xs font-semibold uppercase tracking-wide text-foreground-accent"
+                                    >
+                                        <div className="text-sm font-semibold text-foreground">{plan.name}</div>
+                                        <div className="mt-1 text-xs font-medium text-secondary">{plan.price}</div>
+                                    </th>
+                                ))}
+                            </tr>
+                        </thead>
+                        <tbody className="divide-y divide-gray-200 bg-white text-foreground">
+                            {features.map((feature) => (
+                                <tr key={feature.name}>
+                                    <th
+                                        scope="row"
+                                        className="px-4 py-3 text-left text-sm font-medium text-foreground"
+                                    >
+                                        {feature.name}
+                                    </th>
+                                    {plans.map((plan) => {
+                                        const isAvailable = feature.availability[plan.name];
+
+                                        return (
+                                            <td key={plan.name} className="px-4 py-3 text-center">
+                                                <span
+                                                    className={`inline-flex items-center justify-center gap-1 rounded-full border px-2.5 py-1 text-xs font-semibold ${
+                                                        isAvailable
+                                                            ? 'border-emerald-200 bg-emerald-50 text-emerald-600'
+                                                            : 'border-red-200 bg-red-50 text-red-600'
+                                                    }`}
+                                                >
+                                                    {isAvailable ? (
+                                                        <>
+                                                            <FiPlus aria-hidden className="h-3.5 w-3.5" />
+                                                            <span>Да</span>
+                                                        </>
+                                                    ) : (
+                                                        <>
+                                                            <FiMinus aria-hidden className="h-3.5 w-3.5" />
+                                                            <span>Нет</span>
+                                                        </>
+                                                    )}
+                                                </span>
+                                            </td>
+                                        );
+                                    })}
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     );
