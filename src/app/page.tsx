@@ -14,24 +14,24 @@ const HomePage: React.FC = () => {
       <Container>
         <Section
           id="portfolio"
-          title="Наши боты"
-          description="Пара реальных проектов, которые уже помогают автоматизировать рутину клиентов прямо в Telegram."
+          title="Наши продукты"
+          description="Два Telegram-бота, которые автоматизируют ваш бизнес."
         >
           <Portfolio />
         </Section>
 
         <Section
           id="services"
-          title="Что мы делаем"
-          description="Прорабатываем полный цикл — от идеи и сценариев до автоматизации и поддержки прямо в Telegram."
+          title="Как это работает"
+          description="Мы создали платформу готовых Telegram-ботов, которые вы можете арендовать под свой бизнес. Подключение занимает 5 минут, настройка — прямо в Telegram."
         >
           <Services />
         </Section>
 
         <Section
           id="pricing"
-          title="Цены"
-          description="Прозрачные пакеты для старта, роста и запуска SaaS-решений."
+          title="Прозрачные тарифы"
+          description="Выберите бота и тариф, который подходит вашему бизнесу."
         >
           <Pricing />
         </Section>

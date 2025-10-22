@@ -1,14 +1,23 @@
 import { IPricing } from '@/types';
 
 export const pricingOverview = {
-    category: '1️⃣ SaaS-боты аренда',
-    highlights: ['💇 BotLab Beauty — Free / Pro', '🛍 BotLab Shop — Free / Pro'],
+    categories: ['💇 BotLab Beauty', '🛍 BotLab Shop'],
+    ctas: [
+        {
+            label: '🔗 Подключить салон / магазин',
+            href: 'https://t.me/beauty_flow_bot',
+        },
+        {
+            label: '💬 Задать вопрос в Telegram',
+            href: 'https://t.me/codexdev',
+        },
+    ],
 };
 
 export const tiers: IPricing[] = [
     {
-        title: '1️⃣ BotLab Beauty (для салонов)',
-        description: '🧩 Онлайн-запись, напоминания, расписание и каталог мастеров.',
+        title: 'BotLab Beauty',
+        description: 'Онлайн-запись, напоминания, расписание и каталог мастеров — всё внутри Telegram.',
         plans: [
             {
                 name: 'Free 💡',
@@ -65,8 +74,8 @@ export const tiers: IPricing[] = [
         ],
     },
     {
-        title: '2️⃣ BotLab Shop (для магазинов)',
-        description: '🛍 Каталог товаров, корзина и приём оплат прямо в Telegram.',
+        title: 'BotLab Shop',
+        description: 'Каталог, корзина и приём оплат — запускайте продажи прямо в Telegram без сайта.',
         plans: [
             {
                 name: 'Free 💡',
