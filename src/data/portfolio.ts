@@ -2,14 +2,15 @@ import { IPortfolioItem } from '@/types';
 
 export const portfolio: IPortfolioItem[] = [
     {
-        title: 'Бот для салона красоты',
-        description: 'Запись на услуги, напоминания в Telegram и каталог мастеров с отзывами и портфолио.',
+        title: 'BotLab Beauty (для салонов)',
+        description:
+            'Онлайн-запись, расписание и напоминания для мастеров и салонов. Всё управление — прямо в Telegram.',
         imageSrc: '/images/telegram_demo_fixed.mp4',
         demoUrl: 'https://t.me/beauty_flow_bot',
     },
     {
-        title: 'Квиз-бот для Рамадана',
-        description: 'Ежедневные викторины, рейтинг участников и рассылка полезных материалов для подписчиков.',
+        title: 'BotLab Shop (для магазинов)',
+        description: 'Каталог, корзина и оформление заказов прямо в Telegram. Без сайта и сложных интеграций.',
         imageSrc: '/images/mockup-2.webp',
         demoUrl: 'https://t.me/ramadan_quiz_bot',
     },
