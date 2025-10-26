@@ -1,6 +1,6 @@
 export const heroDetails = {
     heading: 'Telegram-боты, которые работают вместо вас ',
-    subheading: 'Мы создаём умных Telegram-ботов для бизнеса: бронирование, квизы, напоминания и автоматизацию без лишних сервисов.',
+    subheading: 'Два готовых решения — для онлайн-записей и для продаж. Всё управление вашим бизнесом прямо в Telegram.',
     primaryCta: {
         label: '💬 Написать в Telegram',
         href: 'https://t.me/codexdev',
