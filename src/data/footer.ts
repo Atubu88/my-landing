@@ -7,15 +7,19 @@ export const footerDetails: {
     telephone: string;
     socials: ISocials;
 } = {
-    subheading: 'Телеграм-боты, которые продают, консультируют и автоматизируют процессы прямо в Telegram.',
+    subheading: 'Платформа Codex объединяет локальные бизнесы в Telegram, помогает находить клиентов и удерживать их вниманием.',
     quickLinks: [
         {
-            text: 'Наши боты',
+            text: 'Боты в действии',
             url: '#portfolio',
         },
         {
-            text: 'Услуги',
+            text: 'Как это работает',
             url: '#services',
+        },
+        {
+            text: 'Что вы получаете',
+            url: '#benefits',
         },
         {
             text: 'Цены',

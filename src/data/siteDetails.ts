@@ -2,8 +2,9 @@ export const siteDetails = {
     siteName: 'codexbot.dev',
     siteUrl: 'https://codexbot.dev',
     metadata: {
-        title: 'Telegram-боты под ключ от Codex',
-        description: 'Разрабатываем Telegram-ботов для бизнеса: бронирование, квизы, автоматизация и SaaS-проекты внутри Telegram.',
+        title: 'Codex Community — Telegram-платформа для локального бизнеса',
+        description:
+            'Объединяем предпринимателей, подключаем Telegram-бота и помогаем находить клиентов через сообщество.',
     },
     language: 'ru',
     locale: 'ru-RU',

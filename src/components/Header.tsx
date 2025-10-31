@@ -52,7 +52,7 @@ const Header: React.FC = () => {
                                 target="_blank"
                                 rel="noreferrer"
                             >
-                                Написать в Telegram
+                                💬 Присоединиться в Telegram
                             </Link>
                         </li>
                     </ul>
@@ -99,7 +99,7 @@ const Header: React.FC = () => {
                             rel="noreferrer"
                             onClick={toggleMenu}
                         >
-                            Написать в Telegram
+                            💬 Присоединиться в Telegram
                         </Link>
                     </li>
                 </ul>

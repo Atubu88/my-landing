@@ -13,7 +13,7 @@ export interface IPortfolioItem {
     title: string;
     description: string;
     imageSrc: string;
-    demoUrl: string;
+    demoUrl?: string;
 }
 
 export interface IPricingPlan {

@@ -17,14 +17,16 @@ const Portfolio: React.FC = () => {
                             <h3 className="text-2xl font-semibold text-foreground">{item.title}</h3>
                             <p className="mt-2 text-foreground-accent">{item.description}</p>
                         </div>
-                        <a
-                            href={item.demoUrl}
-                            target="_blank"
-                            rel="noreferrer"
-                            className="mt-auto inline-flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-3 font-semibold text-black transition-colors hover:bg-primary-accent"
-                        >
-                            Попробовать в Telegram
-                        </a>
+                        {item.demoUrl && (
+                            <a
+                                href={item.demoUrl}
+                                target="_blank"
+                                rel="noreferrer"
+                                className="mt-auto inline-flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-3 font-semibold text-black transition-colors hover:bg-primary-accent"
+                            >
+                                Посмотреть демо в Telegram
+                            </a>
+                        )}
                     </div>
                 </article>
             ))}

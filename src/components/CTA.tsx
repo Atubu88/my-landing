@@ -20,7 +20,7 @@ const CTA: React.FC = () => {
                             rel="noreferrer"
                             className="telegram-button mt-8 text-base"
                         >
-                            💬 Написать в Telegram
+                            🚀 Подключить бизнес
                         </a>
                     </div>
                 </div>
