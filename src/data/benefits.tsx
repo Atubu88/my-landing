@@ -1,26 +1,31 @@
-import { FiBell, FiBarChart2, FiHeadphones, FiShare2 } from 'react-icons/fi';
+import { FiGrid, FiLifeBuoy, FiMessageSquare, FiTrendingUp, FiUsers } from 'react-icons/fi';
 
 import { IService } from '@/types';
 
 export const benefits: IService[] = [
     {
-        title: 'Telegram-бот для заказов и записей',
-        description: 'Локальные клиенты находят услуги, выбирают время и оставляют заявки прямо в переписке с ботом.',
-        icon: <FiShare2 size={28} />,
+        title: '💬 Telegram-бот под ваш бизнес',
+        description: 'Быстрое решение для заказов и записей — полностью под вашим именем и без сайта.',
+        icon: <FiMessageSquare size={28} />,
     },
     {
-        title: 'Размещение в канале сообщества',
-        description: 'Ваш бизнес появляется в подборках и рекомендациях внутри общего Telegram-канала Codex Community.',
-        icon: <FiBarChart2 size={28} />,
+        title: '🌐 Каталог локальных компаний',
+        description: 'Ваш бизнес виден в Telegram-канале города среди других предпринимателей.',
+        icon: <FiGrid size={28} />,
     },
     {
-        title: 'Уведомления и напоминания клиентам',
-        description: 'Система сама напоминает о записи, отправляет купоны и помогает возвращать клиентов повторно.',
-        icon: <FiBell size={28} />,
+        title: '🚀 Бесплатное продвижение на старте',
+        description: 'Когда сообщество соберёт достаточное число участников, мы запустим городскую рекламную кампанию — для первых участников продвижение бесплатно.',
+        icon: <FiTrendingUp size={28} />,
     },
     {
-        title: 'Поддержка и аналитика',
-        description: 'Команда помогает настроить сценарии и показывает, как растут заявки и вовлечённость.',
-        icon: <FiHeadphones size={28} />,
+        title: '🤝 Естественный обмен клиентами',
+        description: 'Клиенты, взаимодействующие с одним бизнесом, видят и другие — вы получаете новых клиентов без вложений.',
+        icon: <FiUsers size={28} />,
+    },
+    {
+        title: '💡 Поддержка и развитие',
+        description: 'Мы помогаем с настройкой и совершенствуем платформу вместе с первыми участниками.',
+        icon: <FiLifeBuoy size={28} />,
     },
 ];
