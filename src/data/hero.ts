@@ -1,12 +1,13 @@
 export const heroDetails = {
-    heading: 'Telegram-боты, которые работают вместо вас ',
-    subheading: 'Два готовых решения — для онлайн-записей и для продаж. Всё управление вашим бизнесом прямо в Telegram.',
+    heading: 'Telegram-платформа для локальных бизнесов',
+    subheading:
+        'Объединяем предпринимателей в одном сообществе, чтобы продвигать услуги, находить клиентов и повышать узнаваемость без лишних затрат.',
     primaryCta: {
-        label: '💬 Написать в Telegram',
+        label: '💬 Присоединиться в Telegram',
         href: 'https://t.me/codexdev',
     },
     secondaryCta: {
-        label: '🚀 Посмотреть демо-бота',
+        label: '📣 Посмотреть демо',
         href: 'https://t.me/codex_demo_bot',
     },
     centerImageSrc: '/images/hero-chatbot-demo.svg',

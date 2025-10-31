@@ -2,12 +2,16 @@ import { IMenuItem } from '@/types';
 
 export const menuItems: IMenuItem[] = [
     {
-        text: 'Наши боты',
+        text: 'Боты в действии',
         url: '#portfolio',
     },
     {
-        text: 'Услуги',
+        text: 'Как это работает',
         url: '#services',
+    },
+    {
+        text: 'Что вы получаете',
+        url: '#benefits',
     },
     {
         text: 'Цены',

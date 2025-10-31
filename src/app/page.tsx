@@ -6,6 +6,7 @@ import Section from '@/components/Section';
 import CTA from '@/components/CTA';
 import Portfolio from '@/components/Portfolio';
 import Services from '@/components/Services';
+import Benefits from '@/components/Benefits';
 
 const HomePage: React.FC = () => {
   return (
@@ -14,8 +15,10 @@ const HomePage: React.FC = () => {
       <Container>
         <Section
           id="portfolio"
-          title="Наши продукты"
-          description="Два Telegram-бота, которые автоматизируют ваш бизнес."
+          title="Боты в действии"
+          description={
+            'Вот как ваши клиенты будут взаимодействовать с вами через Telegram.\nДва сценария — для салонов и магазинов в одном Telegram-формате.'
+          }
         >
           <Portfolio />
         </Section>
@@ -23,9 +26,17 @@ const HomePage: React.FC = () => {
         <Section
           id="services"
           title="Как это работает"
-          description="Мы создали платформу готовых Telegram-ботов, которые вы можете арендовать под свой бизнес. Подключение занимает 5 минут, настройка — прямо в Telegram."
+          description="Четыре простых шага, чтобы представить свой салон, магазин или студию в сообществе и получать клиентов из Telegram."
         >
           <Services />
+        </Section>
+
+        <Section
+          id="benefits"
+          title="Что вы получаете"
+          description="Инструменты платформы помогают держать связь с клиентами и расти без сложных IT-настроек."
+        >
+          <Benefits />
         </Section>
 
         <Section

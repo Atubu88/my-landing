@@ -12,7 +12,13 @@ const Section: React.FC<React.PropsWithChildren<Props>> = ({ id, title, descript
             <SectionTitle>
                 <h2 className="text-center mb-4">{title}</h2>
             </SectionTitle>
-            {description && <p className="mb-12 text-center text-foreground-accent">{description}</p>}
+            {description && (
+                <div className="mb-12 space-y-3 text-center text-foreground-accent">
+                    {description.split('\n').map((line, index) => (
+                        <p key={index}>{line}</p>
+                    ))}
+                </div>
+            )}
             {children}
         </section>
     );

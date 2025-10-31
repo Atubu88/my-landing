@@ -10,7 +10,8 @@ export const portfolio: IPortfolioItem[] = [
     },
     {
         title: 'BotLab Shop (для магазинов)',
-        description: 'Каталог, корзина и оформление заказов прямо в Telegram. Без сайта и сложных интеграций.',
+        description:
+            'Каталог, корзина и оформление заказов прямо в Telegram. Без сайта и сложных интеграций.',
         imageSrc: '/images/book1.mp4',
         demoUrl: 'https://t.me/ramadan_quiz_bot',
     },
