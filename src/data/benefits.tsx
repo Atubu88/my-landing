@@ -1,4 +1,4 @@
-import { FiGrid, FiLifeBuoy, FiMessageSquare, FiTrendingUp, FiUsers } from 'react-icons/fi';
+import { FiGrid, FiLifeBuoy, FiMessageSquare, FiSettings, FiTrendingUp, FiUsers } from 'react-icons/fi';
 
 import { IService } from '@/types';
 
@@ -7,6 +7,12 @@ export const benefits: IService[] = [
         title: '💬 Telegram-бот под ваш бизнес',
         description: 'Быстрое решение для заказов и записей — полностью под вашим именем и без сайта.',
         icon: <FiMessageSquare size={28} />,
+    },
+    {
+        title: '🧭 Админка прямо в Telegram',
+        description:
+            'Управляйте ботом без лишних панелей: добавляйте услуги, специалистов или товары, редактируйте расписание и цены — всё удобно в одном месте.',
+        icon: <FiSettings size={28} />,
     },
     {
         title: '🌐 Каталог локальных компаний',
