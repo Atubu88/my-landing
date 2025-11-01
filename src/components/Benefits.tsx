@@ -2,7 +2,7 @@ import { benefits } from '@/data/benefits';
 
 const Benefits: React.FC = () => {
     return (
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-2 gap-6 md:grid-cols-2 lg:grid-cols-4">
             {benefits.map(benefit => (
                 <article
                     key={benefit.title}
